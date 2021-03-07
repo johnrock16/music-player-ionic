@@ -14,7 +14,7 @@ const AlbumScreen = (props) => {
   const {listMusics} = state;
 
   const getMusic = async ()=>{
-    const resolve = await fetch('http://localhost:3000/getPlaylist?id=0',{
+    const resolve = await fetch(`http://localhost:3000/getPlaylist?id=${musicContext.selectedPlaylist.id}`,{
       method:'GET',
       headers:{
         'accept':'application/json',
@@ -31,10 +31,17 @@ const AlbumScreen = (props) => {
       musicContext.setListMusic(result.musics);
       setState((pv)=>({...pv,listMusics:result.musics}));
     })
-  },[]);
+  },[musicContext.selectedPlaylist.id]);
 
   return (
-   (listMusics) && (<ListPageScreen listMusics={listMusics} name={'Paramore'} onSelect={(item,index)=>{musicContext.setSelectedMusic({id:index,...item})}}/>)
+   (listMusics) && (
+    <ListPageScreen
+      listMusics={listMusics}
+      name={musicContext.selectedPlaylist.name}
+      onSelect={(item,index)=>{musicContext.setSelectedMusic({id:index,...item})}}
+      goTo='/Player'
+     />
+    )
   );
 };
 

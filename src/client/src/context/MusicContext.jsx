@@ -9,7 +9,8 @@ const defaultValue={
     music:'',
     image:'',
   },
-  listMusic:[]
+  listMusic:[],
+  selectedPlaylist:{}
 }
 
 export const MusicContext= createContext(defaultValue);
@@ -18,10 +19,12 @@ export const MusicContextProvider=({children})=>{
 
   const [state,setState] = useState(defaultValue);
 
-  const {selectedMusic} = state;
-
   const setSelectedMusic= (selectedMusic)=>{
     setState((pv)=>({...pv,selectedMusic}))
+  }
+
+  const setSelectedPlaylist= (selectedPlaylist)=>{
+    setState((pv)=>({...pv,selectedPlaylist}))
   }
 
   const setListMusic=(listMusic)=>{
@@ -34,6 +37,7 @@ export const MusicContextProvider=({children})=>{
         setListMusic,
         setSelectedMusic,
         setState,
+        setSelectedPlaylist,
     }}>
       {children}
     </MusicContext.Provider>

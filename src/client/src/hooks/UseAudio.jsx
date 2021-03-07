@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import sound from "../assets/Paramore - That's What You Get (HQ Audio).mp3";
-import sound2 from "../assets/Paramore - Pressure (HQ Audio).mp3";
 
 
 const useAudio = url => {

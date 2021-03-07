@@ -10,7 +10,6 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab3 from './pages/Tab3';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,6 +32,7 @@ import './theme/variables.css';
 import { MusicContextProvider } from './context/MusicContext.jsx';
 import AlbumScreen from './pages/AlbumScreen/AlbumScreen.jsx';
 import PlayerScreen from './pages/Player/Player.jsx';
+import HomePage from './pages/HomePage/HomePage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -46,23 +46,23 @@ const App: React.FC = () => (
           <Route exact path="/playlist">
             <AlbumScreen />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/homePage">
+            <HomePage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/playlist" />
+            <Redirect to="/homePage" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab-ṕlaylist" href="/playlist">
+          <IonTabButton tab="tab-ṕlaylist" href="/homePage">
             <IonIcon icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab-player" href="/player">
+          <IonTabButton tab="tab-player" href="/playlist">
             <IonIcon icon={ellipse} />
             <IonLabel>Tab 2</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="tab3" href="/player">
             <IonIcon icon={square} />
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>

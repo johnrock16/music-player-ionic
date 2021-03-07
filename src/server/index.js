@@ -87,18 +87,60 @@ const MUSIC=
         band:"Paramore",
         music:"http://localhost:3000/music?name=Paramore-Pressure.mp3",
         image:"https://i2.rozetka.ua/goods/12577426/96217768_images_12577426294.jpg",
-    }
+    },
+    {
+        index:2,
+        title:"crushcrushcrush",
+        band:"Paramore",
+        music:"http://localhost:3000/music?name=Paramore - crushcrushcrush (HQ Audio).mp3",
+        image:"https://images-na.ssl-images-amazon.com/images/I/91wuBxVoekL._AC_SX425_.jpg",
+    },
+    {
+        index:3,
+        title:"Rose Colored Boy",
+        band:"Paramore",
+        music:"http://localhost:3000/music?name=Paramore - Rose Colored Boy.mp3",
+        image:"https://images-na.ssl-images-amazon.com/images/I/41V%2BJ3EqJhL._AC_.jpg",
+    },
+    {
+        index:4,
+        title:"Looking Up",
+        band:"Paramore",
+        music:"http://localhost:3000/music?name=Paramore - Looking Up (Brand New Eyes Deluxe Edition).mp3",
+        image:"https://images-na.ssl-images-amazon.com/images/I/81m0BptHZ4L._AC_SL1425_.jpg",
+    },
+]
+
+const RIOT=[
+    {
+        index:0,
+        title:"That's What You Get",
+        band:"Paramore",
+        music:"http://localhost:3000/music?name=Paramore-Thats-What-You-Get.mp3",
+        image:"https://images-na.ssl-images-amazon.com/images/I/91wuBxVoekL._AC_SX425_.jpg",
+    },
+    {
+        index:1,
+        title:"crushcrushcrush",
+        band:"Paramore",
+        music:"http://localhost:3000/music?name=Paramore - crushcrushcrush (HQ Audio).mp3",
+        image:"https://images-na.ssl-images-amazon.com/images/I/91wuBxVoekL._AC_SX425_.jpg",
+    },
 ]
 
 const PLAYLIST=[
     {
-        name:'Paramore Riot',
-        isAlbum:true,
-        musics:MUSIC
-    },
-    {
         name:'Best of Paramore',
         isAlbum:false,
-        musics:MUSIC
-    }
+        band:'Paramore',
+        thumb:'https://br.nacaodamusica.com/wp-content/uploads/2017/06/paramore.jpg',
+        musics:MUSIC,
+    },
+    {
+        name:'Paramore Riot',
+        isAlbum:true,
+        band:'Paramore',
+        thumb:'https://images-na.ssl-images-amazon.com/images/I/91wuBxVoekL._AC_SX425_.jpg',
+        musics:RIOT,
+    },
 ]
