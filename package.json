@@ -1,0 +1,23 @@
+{
+  "name": "ionic-music-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server/index.js",
+  "scripts": {
+    "start": "nodemon start",
+    "client-start": "cd src && cd client && ionic serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7"
+  },
+  "author": "",
+  "license": "ISC"
+}
